@@ -1,0 +1,47 @@
+{
+    "name": "tobento/service-database-storage",
+    "type": "library",
+    "description": "Database implementation for storages.",
+    "keywords": [
+        "tobento",
+        "package",
+        "storage",
+        "database"
+    ],
+    "homepage": "https://www.tobento.ch",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Tobias Strub",
+            "email": "info@tobento.ch",
+            "homepage": "https://www.tobento.ch"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "php": ">=8.0",
+        "tobento/service-database": "^1.1.1",
+        "tobento/service-storage": "^1.1.9",
+        "tobento/service-iterable": "^1.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5",
+        "vimeo/psalm": "^4.0",
+        "tobento/service-filesystem": "^1.0"
+    },    
+    "autoload": {
+        "psr-4": {
+            "Tobento\\Service\\Database\\Storage\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tobento\\Service\\Database\\Storage\\Test\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "phpunit --testdox --colors=always",
+        "psalm": "vendor/bin/psalm"
+    }
+}
